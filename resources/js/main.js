@@ -36,7 +36,8 @@ for (let el of lists) {
 
   // Background-image each frame
   let pic = el.querySelector(".pic");
-  pic.style.backgroundImage = `url(resources/img/background (15).jpg)`;
+  let cover = el.querySelector("h2").innerText;
+  pic.style.backgroundImage = `url("./resources/img/${cover}.jpg")`;
 
   // Control BTN audio
   let play = el.querySelector(".play");

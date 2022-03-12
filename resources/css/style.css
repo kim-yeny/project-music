@@ -30,7 +30,6 @@ figure h1 {
 	top: 7vh;
 	left: 4vw;
 	color: #fff;
-	font-family: "arial";
 	font-size: 0;
 	letter-spacing: 1px;
 }
@@ -90,15 +89,14 @@ figure section article {
 /* Group of panels' contents */
 figure section article .inner {
 	width: 100%;
-	height: 100%;
+	height: fit-content;
 	background: #f0f7ff;
-	padding: 5vh 2.5vw 8vh;
+	padding: 5vh 2.5vw 7vh;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
 	align-content: space-between;
 	flex-wrap: wrap;
-
 	border-radius: 10px;
 	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 	opacity: 0.6;
@@ -164,27 +162,28 @@ figure section article .inner .pic .dot {
 
 /* Audio and Text */
 figure section article .inner .txt {
+	width: 100%;
 	text-align: center;
 	position: relative;
 	z-index: 3;
+	margin-top: 5vh;
 }
 
 figure section article .inner .txt h2 {
 	font-size: 20px;
-	font-family: "arial";
 	color: #222;
-	margin-bottom: 2vh;
 }
 
 figure section article .inner .txt p {
 	font-size: 12px;
-	margin-bottom: 3vh;
+	margin: 1vh 0 2vh;
 	color: #777;
 }
 
 figure section article .inner .txt ul {
 	display: flex;
 	justify-content: space-around;
+	margin-top: 5vh;
 }
 
 figure section article .inner .txt ul li {
