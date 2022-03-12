@@ -1,0 +1,347 @@
+@charset "utf-8";
+
+/* Reset */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
+}
+
+/* Figure */
+figure {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(25deg, violet, pink);
+}
+
+figure h1 {
+	position: absolute;
+	top: 7vh;
+	left: 4vw;
+	color: #fff;
+	font-family: "arial";
+	font-size: 0;
+	letter-spacing: 1px;
+}
+
+figure h1 strong {
+	font-size: 36px;
+	line-height: 1.4;
+}
+
+figure h1 span {
+	font-size: 12px;
+	opacity: 0.8;
+	line-height: 1;
+}
+
+figure .menu {
+	position: absolute;
+	top: 8vh;
+	right: 4vw;
+	font-size: 24px;
+	color: #fff;
+}
+
+figure > p {
+	position: absolute;
+	bottom: 7vh;
+	left: 50%;
+	transform: translateX(-50%);
+	font: 12px/1 "arial";
+	color: #fff;
+	letter-spacing: 2px;
+	opacity: 0.8;
+}
+
+/* Section */
+/* Group of music player panel frame */
+figure section {
+	width: 20vw;
+	height: 65vh;
+	position: absolute;
+	left: 50%;
+	top: 140%;
+	margin-top: -25vh;
+	margin-left: -10vw;
+	transition: 1s;
+}
+
+/* Each music player panel */
+figure section article {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+/* Group of panels' contents */
+figure section article .inner {
+	width: 100%;
+	height: 100%;
+	background: #f0f7ff;
+	padding: 5vh 2.5vw 8vh;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-content: space-between;
+	flex-wrap: wrap;
+
+	border-radius: 10px;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+	opacity: 0.6;
+	transform: scale(0.8);
+	transition: opacity 1s, transform 1s;
+}
+
+/* Active article */
+figure section article.on .inner {
+	opacity: 0.9;
+	transform: scale(1.1);
+}
+
+/* Frame of cover image */
+/* 배경 이미지만 가상 자식 요소에 전달하는 용도 */
+figure section article .inner .pic {
+	width: 15vw;
+	height: 15vw;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: 200%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 부모 .pic으로부터 크기, 배경 상속 */
+figure section article .inner .pic::before,
+figure section article .inner .pic::after {
+	content: "";
+	display: block;
+	width: inherit;
+	height: inherit;
+	border-radius: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: inherit;
+	background-position: center;
+	background-repeat: inherit;
+	background-size: cover;
+	transform-origin: center center;
+}
+
+/* 음반 커버 이미지의 그림자로 만들어 줄 것이므로 살짝 아래쪽 배치 */
+figure section article .inner .pic::before {
+	transform: translateY(10%);
+	filter: blur(20px) brightness(1.6);
+}
+
+/* Disk */
+figure section article .inner .pic .dot {
+	width: 3vw;
+	height: 3vw;
+	border-radius: 50%;
+	background: #e4f1ff;
+	position: relative;
+	z-index: 3;
+	box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Audio and Text */
+figure section article .inner .txt {
+	text-align: center;
+	position: relative;
+	z-index: 3;
+}
+
+figure section article .inner .txt h2 {
+	font-size: 20px;
+	font-family: "arial";
+	color: #222;
+	margin-bottom: 2vh;
+}
+
+figure section article .inner .txt p {
+	font-size: 12px;
+	margin-bottom: 3vh;
+	color: #777;
+}
+
+figure section article .inner .txt ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+figure section article .inner .txt ul li {
+	cursor: pointer;
+	opacity: 0.6;
+	transition: 0.5s;
+}
+
+figure section article .inner .txt ul li.play {
+	transform: scale(1.5);
+	opacity: 0.9;
+}
+
+figure section article .inner .txt ul li:hover {
+	transform: scale(1.5);
+	opacity: 0.8;
+}
+
+figure section article .inner .txt ul li.play:hover {
+	transform: scale(2);
+	opacity: 1;
+}
+
+/* Animation about music disk */
+@keyframes coverRotate {
+	0% {
+		transform: rotate(0deg);
+	}	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes shadowRotate {
+	0% {
+		transform: translateY(10%) rotate(0deg);
+	}	100% {
+		transform: translateY(10%) rotate(360deg);
+	}
+}
+
+figure section article .inner .pic.on::after {
+	animation: coverRotate 4s linear infinite;
+}
+
+figure section article .inner .pic.on::before {
+	animation: shadowRotate 4s linear infinite;
+}
+
+/* BTN panel control */
+/* BTN prev */
+figure .btnPrev,
+figure .btnNext {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+figure .btnPrev {
+	left: 50%;
+	transform: translate(-20vw, -50%);
+	text-align: left;
+}
+
+figure .btnNext {
+	right: 50%;
+	transform: translate(20vw, -50%);
+	text-align: right;
+}
+
+figure .btnPrev span,
+figure .btnNext span {
+	font-size: 11px/1 "arial";
+	color: #fff;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+figure .btnPrev span {
+	transform: translate(30%);
+}
+
+figure .btnNext span {
+	transform: translate(-30%);
+}
+
+figure .btnPrev::before,
+figure .btnNext::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transition: 0.5s;
+}
+
+figure .btnPrev::before {
+	transform-origin: left center;
+	transform: rotate(-180deg);
+}
+
+figure .btnNext::before {
+	transform-origin: right center;
+	transform: rotate(180deg);
+}
+
+figure .btnPrev::after,
+figure .btnNext::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	position: absolute;
+	bottom: 50%;
+	left: 0;
+	transition: 0.5s;
+}
+
+figure .btnPrev::after {
+	transform-origin: left center;
+	transform: rotate(180deg);
+}
+
+figure .btnNext::after {
+	transform-origin: right center;
+	transform: rotate(-180deg);
+}
+
+figure .btnPrev:hover span {
+	opacity: 0;
+	transform: translateX(100%);
+}
+
+figure .btnNext:hover span {
+	opacity: 0;
+	transform: translateX(-100%);
+}
+
+figure .btnPrev:hover::before {
+	transform: rotate(-30deg);
+}
+
+figure .btnNext:hover::before {
+	transform: rotate(30deg);
+}
+
+figure .btnPrev:hover::after {
+	transform: rotate(30deg);
+}
+
+figure .btnNext:hover::after {
+	transform: rotate(-30deg);
+}
