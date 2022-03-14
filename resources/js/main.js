@@ -76,6 +76,7 @@ function setMusic(lists) {
 
     // Click BTN play
     play.addEventListener("click", e => {
+      initMusic();
       let isActive = e.currentTarget.closest("article").classList.contains("on");
       if (isActive) {
         e.currentTarget.closest("article").querySelector(".pic").classList.add("on");
@@ -94,6 +95,7 @@ function setMusic(lists) {
 
     // Click BTN load
     load.addEventListener("click", e => {
+      initMusic();
       let isActive = e.currentTarget.closest("article").classList.contains("on");
       if (isActive) {
         e.currentTarget.closest("article").querySelector(".pic").classList.add("on");
@@ -130,7 +132,7 @@ for (let el of menus) {
 
 // Click BTN prev --- Rotate frame
 prev.addEventListener("click", () => {
-  initMusic();
+  // initMusic();
   num++;
   frame.style.transform = `rotate(${deg*num}deg)`;
   // If current panel sequence is 0 --- Change the order of the last panel
@@ -141,7 +143,7 @@ prev.addEventListener("click", () => {
 
 // Click BTN prev --- Rotate frame
 next.addEventListener("click", () => {
-  initMusic();
+  // initMusic();
   num--;
   frame.style.transform = `rotate(${deg*num}deg)`;
   // If current panel sequence is last --- Change the order of the 1st panel

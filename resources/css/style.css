@@ -6,7 +6,7 @@
   --main-color: #a29bfe;
   --large-font: 2rem;
   --regular-font: 1rem;
-  --small-font: 0.813rem;
+  --small-font: 0.72rem;
 }
 
 html, body {
@@ -53,7 +53,7 @@ header h1 {
 }
 
 header h1 strong {
-  font-size: 36px;
+font-size: var(--large-font);
   font-weight: bold;
   letter-spacing: 0.1em;
 }
@@ -112,7 +112,7 @@ figure {
   height: 100vh;
   position: fixed;
   overflow: hidden;
-  transition: top 1s;
+  transition: top 0.8s;
 }
 
 figure.active {
@@ -176,7 +176,6 @@ figure section article.on .inner {
 
 figure section article.on .inner .line-inner {
   opacity: 1;
-  transition: opacity 2s;
 }
 
 figure section article .inner .line-inner {
@@ -190,6 +189,7 @@ figure section article .inner .line-inner {
   box-sizing: border-box;
   border-radius: 38px;
   border: 2px solid var(--main-color);
+  transition: opacity 0.8s;
 }
 
 /* Frame of cover image */
