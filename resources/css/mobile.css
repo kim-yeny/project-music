@@ -121,37 +121,37 @@
 
   /* BTN panel control */
   /* BTN prev */
-  .btnPrev,
-  .btnNext {
+  .btn-prev,
+  .btn-next {
     top: unset;
     bottom: 20px;
     width: 30px;
     /* border: 1px solid red; */
   }
 
-  .btnPrev {
+  .btn-prev {
     left: 50%;
     transform: translate(-20vw, -50%);
   }
 
-  .btnNext {
+  .btn-next {
     right: 50%;
     transform: translate(20vw, -50%);
   }
 
-  .btnPrev span,
-  .btnNext span {
+  .btn-prev span,
+  .btn-next span {
     /* font-size: 12px; */
   }
 
-  .btnNext span {
+  .btn-next span {
     transform: translate(-50%);
   }
 
-  .btnPrev::before,
-  .btnNext::before,
-  .btnPrev::after,
-  .btnNext::after {
+  .btn-prev::before,
+  .btn-next::before,
+  .btn-prev::after,
+  .btn-next::after {
     /* display: none; */
   }
 }

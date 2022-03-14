@@ -4,8 +4,8 @@ let lists = frame.querySelectorAll("article");
 const audio = document.querySelectorAll("audio");
 const nav = document.querySelector("nav");
 const menus = document.querySelectorAll("nav a");
-const prev = document.querySelector(".btnPrev");
-const next = document.querySelector(".btnNext");
+const prev = document.querySelector(".btn-prev");
+const next = document.querySelector(".btn-next");
 
 const deg = 45; // 360 / 8 = 45
 const len = lists.length - 1;

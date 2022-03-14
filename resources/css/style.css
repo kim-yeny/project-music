@@ -325,8 +325,8 @@ figure section article .inner .pic.on::before {
 
 /* BTN panel control */
 /* BTN prev */
-.btnPrev,
-.btnNext {
+.btn-prev,
+.btn-next {
   position: fixed;
   top: 50%;
   width: 60px;
@@ -337,35 +337,35 @@ figure section article .inner .pic.on::before {
   z-index: 200;
 }
 
-.btnPrev {
+.btn-prev {
   left: 50%;
   transform: translate(-20vw, -50%);
   text-align: left;
 }
 
-.btnNext {
+.btn-next {
   right: 50%;
   transform: translate(20vw, -50%);
   text-align: right;
 }
 
-.btnPrev span,
-.btnNext span {
+.btn-prev span,
+.btn-next span {
   opacity: 1;
   transition: 0.5s;
   font-size: var(--small-font);
 }
 
-.btnPrev span {
+.btn-prev span {
   transform: translate(30%);
 }
 
-.btnNext span {
+.btn-next span {
   transform: translate(-30%);
 }
 
-.btnPrev::before,
-.btnNext::before {
+.btn-prev::before,
+.btn-next::before {
   content: "";
   display: block;
   width: 100%;
@@ -377,18 +377,18 @@ figure section article .inner .pic.on::before {
   transition: 0.5s;
 }
 
-.btnPrev::before {
+.btn-prev::before {
   transform-origin: left center;
   transform: rotate(-180deg);
 }
 
-.btnNext::before {
+.btn-next::before {
   transform-origin: right center;
   transform: rotate(180deg);
 }
 
-.btnPrev::after,
-.btnNext::after {
+.btn-prev::after,
+.btn-next::after {
   content: "";
   display: block;
   width: 100%;
@@ -400,38 +400,38 @@ figure section article .inner .pic.on::before {
   transition: 0.5s;
 }
 
-.btnPrev::after {
+.btn-prev::after {
   transform-origin: left center;
   transform: rotate(180deg);
 }
 
-.btnNext::after {
+.btn-next::after {
   transform-origin: right center;
   transform: rotate(-180deg);
 }
 
-.btnPrev:hover span {
+.btn-prev:hover span {
   opacity: 0;
   transform: translateX(100%);
 }
 
-.btnNext:hover span {
+.btn-next:hover span {
   opacity: 0;
   transform: translateX(-100%);
 }
 
-.btnPrev:hover::before {
+.btn-prev:hover::before {
   transform: rotate(-30deg);
 }
 
-.btnNext:hover::before {
+.btn-next:hover::before {
   transform: rotate(30deg);
 }
 
-.btnPrev:hover::after {
+.btn-prev:hover::after {
   transform: rotate(30deg);
 }
 
-.btnNext:hover::after {
+.btn-next:hover::after {
   transform: rotate(-30deg);
 }
