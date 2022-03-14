@@ -12,6 +12,8 @@ const len = lists.length - 1;
 let num = 0;
 let active = 0;
 
+console.log('asdasd');
+
 // Start
 setMusic(lists);
 
@@ -85,7 +87,8 @@ function setMusic(lists) {
       // End audio
       let endAudio = e.currentTarget.closest("article").querySelector("audio");
       endAudio.addEventListener("ended", function() {
-        initMusic();
+        e.currentTarget.closest("article").querySelector(".pic").classList.remove("on");
+        // initMusic();
         // num--;
         // frame.style.transform = `rotate(${deg*num}deg)`;
         // // If current panel sequence is last --- Change the order of the 1st panel
