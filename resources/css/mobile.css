@@ -8,9 +8,9 @@
 
   /* Title */
   header {
-    position: unset;
-    width: 90vw;
-    margin: 3vh auto 0;
+    position: fixed;
+    top: 3vh;
+    width: 100vw;
   }
 
   header h1 {
@@ -32,7 +32,7 @@
 
   /* Footer */
   footer {
-    bottom: 5vh;
+    bottom: 3vh;
   }
 
   /* Figure */
