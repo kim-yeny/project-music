@@ -353,6 +353,7 @@ figure section article .inner .pic.on::before {
 .btnNext span {
   opacity: 1;
   transition: 0.5s;
+  font-size: var(--small-font);
 }
 
 .btnPrev span {
