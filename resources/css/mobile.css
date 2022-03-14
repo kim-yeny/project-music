@@ -43,10 +43,10 @@
   /* Section */
   /* Group of music player panel frame */
   figure section {
-    width: 90vw;
+    width: 80vw;
     height: 50%;
-    top: 145%;
-    margin-left: -45vw;
+    top: 148%;
+    margin-left: -40vw;
   }
 
   /* Group of panels' contents */
