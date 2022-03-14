@@ -18,6 +18,10 @@
     text-align: center;
   }
 
+  header h1 strong {
+    font-size: 22px;
+  }
+
   /* Navigation */
   header nav {
     position: unset;
@@ -78,8 +82,8 @@
   /* Frame of cover image */
   /* 배경 이미지만 가상 자식 요소에 전달하는 용도 */
   figure section article .inner .pic {
-    width: 45vw;
-    height: 45vw;
+    width: 40vw;
+    height: 40vw;
   }
 
   /* 음반 커버 이미지의 그림자로 만들어 줄 것이므로 살짝 아래쪽 배치 */
@@ -104,8 +108,8 @@
 
   /* Disk */
   figure section article .inner .pic .dot {
-    width: 11vw;
-    height: 11vw;
+    width: 10vw;
+    height: 10vw;
   }
 
   /* Audio and Text */
@@ -151,6 +155,15 @@
 
 /* Tablet ver. */
 @media(min-width : 768px) and (max-width : 1024px) and (orientation: portrait) {
+  /* Section */
+  /* Group of music player panel frame */
+  figure section {
+    width: 60vw;
+    height: 50%;
+    top: 148%;
+    margin-left: -30vw;
+  }
+
   /* Frame of cover image */
   /* 배경 이미지만 가상 자식 요소에 전달하는 용도 */
   figure section article .inner .pic {
