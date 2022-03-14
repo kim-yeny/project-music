@@ -86,8 +86,9 @@ function setMusic(lists) {
 
       // End audio
       let endAudio = e.currentTarget.closest("article").querySelector("audio");
-      endAudio.addEventListener("ended", function() {
-        e.currentTarget.parentElement.previousElementSibling(".pic").classList.remove("on");
+
+      endAudio.addEventListener("ended", e => {
+        e.currentTarget.parentElement.previousElementSibling.classList.remove("on");
         // initMusic();
         // num--;
         // frame.style.transform = `rotate(${deg*num}deg)`;
