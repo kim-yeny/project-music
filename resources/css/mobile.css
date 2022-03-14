@@ -122,7 +122,8 @@
   /* BTN prev */
   .btnPrev,
   .btnNext {
-    top: 85%;
+    top: unset;
+    bottom: 20px;
     width: 30px;
   }
 
