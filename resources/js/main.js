@@ -12,8 +12,6 @@ const len = lists.length - 1;
 let num = 0;
 let active = 0;
 
-console.log('qweqweqw');
-
 // Start
 setMusic(lists);
 
