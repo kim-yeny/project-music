@@ -102,6 +102,7 @@ footer {
   bottom: 7vh;
   left: 50%;
   transform: translateX(-50%);
+  font-size: var(--small-font);
   color: #ccc;
   letter-spacing: 0.2em;
 }
