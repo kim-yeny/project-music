@@ -81,6 +81,18 @@ function setMusic(lists) {
         e.currentTarget.closest("article").querySelector(".pic").classList.add("on");
         e.currentTarget.closest("article").querySelector("audio").play();
       }
+
+      // End audio
+      let endAudio = e.currentTarget.closest("article").querySelector("audio");
+      endAudio.addEventListener("ended", function() {
+        initMusic();
+        // num--;
+        // frame.style.transform = `rotate(${deg*num}deg)`;
+        // // If current panel sequence is last --- Change the order of the 1st panel
+        // // If not last --- Increase by 1 from the current panel and Run activation()
+        // (active == len) ? active = 0: active++;
+        // activation(active, lists);
+      });
     });
 
     // Click BTN pause
@@ -149,14 +161,3 @@ next.addEventListener("click", () => {
   (active == len) ? active = 0: active++;
   activation(active, lists);
 });
-
-audio.onended = () => {
-    alert("The audio has ended");
-
-    num--;
-    frame.style.transform = `rotate(${deg*num}deg)`;
-    // If current panel sequence is last --- Change the order of the 1st panel
-    // If not last --- Increase by 1 from the current panel and Run activation()
-    (active == len) ? active = 0: active++;
-    activation(active, lists);
-};
